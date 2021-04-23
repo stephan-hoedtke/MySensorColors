@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MySensorColors</string>
+    <string name="title_home">Rotation</string>
+    <string name="title_dashboard">Gyro</string>
+    <string name="title_notifications">Proximity</string>
+    <string name="default_value">30</string>
+</resources>
