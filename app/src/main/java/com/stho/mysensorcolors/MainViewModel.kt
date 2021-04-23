@@ -88,24 +88,24 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val roll = Math.toDegrees(orientations[2].toDouble())
             this.value = pitch
             when {
-                azimuth > 10 -> {
+                azimuth > 20 -> {
                     // anticlockwise
                     color = Color.BLUE
                 }
-                azimuth < -10 -> {
+                azimuth < -20 -> {
                     // clockwise
-                    color = Color.YELLOW
+                    color = Color.CYAN
                 }
-                pitch > 10 -> {
+                pitch > 20 -> {
                     color = Color.RED
                 }
-                pitch < -10 -> {
+                pitch < -20 -> {
                     color = Color.GREEN
                 }
-                roll > 10 -> {
+                roll > 20 -> {
                     color = Color.DKGRAY
                 }
-                roll < -10 -> {
+                roll < -20 -> {
                     color = Color.LTGRAY
                 }
                 else -> {
@@ -120,24 +120,24 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         if (mode == Mode.Gyroscope) {
             this.value = values[0].toDouble()
             when {
-                values[2] > 0.1f -> {
+                values[2] > 0.4f -> {
                     // anticlockwise
                     color = Color.BLUE
                 }
-                values[2] < -0.1f -> {
+                values[2] < -0.4f -> {
                     // clockwise
-                    color = Color.YELLOW
+                    color = Color.CYAN
                 }
-                values[0] > 0.1f -> {
+                values[0] > 0.4f -> {
                     color = Color.RED
                 }
-                values[0] < -01f -> {
-                    color = Color.GREEN
+                values[0] < -0.4f -> {
+                    color = Color.YELLOW
                 }
-                values[1] > 0.1f -> {
+                values[1] > 0.4f -> {
                     color = Color.DKGRAY
                 }
-                values[1] < -01f -> {
+                values[1] < -0.4f -> {
                     color = Color.LTGRAY
                 }
                 else -> {
