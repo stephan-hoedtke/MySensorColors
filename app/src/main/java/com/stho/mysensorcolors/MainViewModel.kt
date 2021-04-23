@@ -94,7 +94,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 }
                 azimuth < -20 -> {
                     // clockwise
-                    color = Color.CYAN
+                    color = Color.YELLOW
                 }
                 pitch > 20 -> {
                     color = Color.RED
@@ -126,13 +126,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 }
                 values[2] < -0.4f -> {
                     // clockwise
-                    color = Color.CYAN
+                    color = Color.YELLOW
                 }
                 values[0] > 0.4f -> {
                     color = Color.RED
                 }
                 values[0] < -0.4f -> {
-                    color = Color.YELLOW
+                    color = Color.GREEN
                 }
                 values[1] > 0.4f -> {
                     color = Color.DKGRAY
